@@ -39,14 +39,14 @@ jobs:
     - name: Run test suite
       run: phpunit
     
-    - name: Setup PHP with Xdebug
+     name: Setup PHP with Xdebug
       uses: shivammathur/setup-php@v2
       with:
         php-version: '7.4'
         coverage: xdebug
 
     - name: Coverage
-      run: php bin/phpunit --coverage-php
+      run: php bin/phpunit --coverage-clover=coverage.xml
 
     - name: Check test coverage
       id: test-coverage
@@ -54,5 +54,3 @@ jobs:
       with:
         percentage: "60"
         filename: "coverage.xml"
-      
-
