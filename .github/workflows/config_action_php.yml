@@ -39,6 +39,7 @@ jobs:
     - name: Run test suite
       run: phpunit
 
+    - name: Run coverage
     - uses: devmasx/coverage-check-action@v1.2.0
   with:
     type: simplecov
