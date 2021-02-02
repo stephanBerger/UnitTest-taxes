@@ -1,6 +1,8 @@
 {
     "type": "project",
     "license": "proprietary",
+    "name": "test action",
+    "description":"creation action manuel dans git",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
