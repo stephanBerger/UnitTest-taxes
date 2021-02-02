@@ -54,3 +54,9 @@ jobs:
       with:
         percentage: "60"
         filename: "coverage.xml"
+
+  phplint:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+        - uses: michaelw90/PHP-Lint@master  
