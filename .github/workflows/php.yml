@@ -13,12 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: maj composer
+      run: composer update
 
     - name: Validate composer.json and composer.lock
       run: composer validate
     
-    - name: maj composer
-      run: composer update
+    
 
     - name: Cache Composer packages
       id: composer-cache
