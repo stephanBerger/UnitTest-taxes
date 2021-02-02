@@ -10,20 +10,21 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ImpotController extends AbstractController
-{
+class ImpotController extends AbstractController{
     /**
      * @Route("/", name="impot")
      */
     public function index(Request $request, CalculateurImpot $calculateurImpot): Response
     {
+
+
+
         $fb = $this->createFormBuilder();
         $form = $fb
             ->add('revenu', IntegerType::class)
             ->add('nbPart', IntegerType::class)
             ->add('save', SubmitType::class)
-            ->getForm()
-        ;
+            ->getForm()        ;
 
         $form->handleRequest($request);
         $result = [];
